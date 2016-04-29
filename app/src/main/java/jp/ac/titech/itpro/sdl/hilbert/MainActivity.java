@@ -2,6 +2,7 @@ package jp.ac.titech.itpro.sdl.hilbert;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -10,10 +11,12 @@ public class MainActivity extends AppCompatActivity {
     private HilbertView hilbertView;
     private final static int MAX_N = 9;
     private int n = 1;
+    private final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG,"onCreate");
         setContentView(R.layout.activity_main);
         levelView = (TextView)findViewById(R.id.level_view);
         hilbertView = (HilbertView)findViewById(R.id.hilbert_view);
